@@ -1,0 +1,253 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-family: 'League Spartan', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.hero{
+    height:80vh;
+}
+
+.top{
+    flex-direction: row;
+    margin: 0rem 5rem 0rem 5rem;
+    display: flex;
+    align-items: flex-start;
+    height: 60%;
+}
+
+.topLeft{
+    justify-content: left;
+    width: 40%;
+    height: 100%;
+    padding-right: 5em;
+}
+
+.topLeft__heading{
+    align-items: left;
+    color:hsl(300, 43%, 22%);
+    padding-right: 4rem;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.topLeft__text{
+    color: hsl(303, 10%, 53%);
+    line-height: 1.5em;
+    font-weight: 400;
+}
+
+.topRight{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    margin-top: 1em;
+    color: hsl(300, 43%, 22%);
+    font-weight: 700;
+}
+
+.topRight__rate1, .topRight__rate2, .topRight__rate3{
+    border-radius: 0.5em;
+    background-color: hsla(300, 37%, 91%, 0.782);
+    height: 2em;
+    vertical-align: baseline;
+    padding-top: 0.5em;
+    padding-left: 2em;
+    width: 25em
+    
+}
+
+.stars{
+  padding-right: 2em;
+}
+
+.topRight__rate1{
+    align-self: flex-start;
+}
+
+.topRight__rate2{
+    align-self: center;
+}
+
+.topRight__rate3{
+    align-self: flex-end;
+}
+
+.bottom{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "left center right"
+    ;
+    grid-gap: 2em;
+    flex-direction: row;
+    font-weight: normal;
+    margin: 0rem 5rem 0rem 5rem;
+    align-items: flex-end;
+    height: 40%;
+}
+
+.cardheader{
+    display: flex;
+    align-items: center;
+}
+
+.templateimg{
+    box-sizing: border-box;
+    border-radius: 50%;
+    height: 3em;
+}
+
+.coltonimg, .ireneimg, .anneimg{
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.name-verifbuy{
+    line-height: 0em;
+    padding-left: 1.5em;
+}
+
+.name{
+    color: hsl(0, 0%, 100%);
+}
+
+.bottomLeft, .bottomCenter, .bottomRight{
+    padding-top: 2em;
+    padding-left: 1.5em;
+    padding-right: 2em;
+    border-radius: 10px;
+    height: 12em;
+}
+
+.bottomLeft{
+    grid-area: left;
+    background-color: hsl(300, 43%, 22%);
+    align-self: start;
+}
+
+.bottomCenter{
+    grid-area: center;
+    background-color: hsl(300, 43%, 22%);
+    align-self: center;
+}
+
+.bottomRight{
+    grid-area: right;
+    background-color: hsl(300, 43%, 22%);
+    align-self: end;
+}
+
+.quotes{
+    color: hsl(300, 24%, 96%);
+    line-height: 1.5em;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.verifbuy{
+    color: hsl(333, 80%, 67%);
+    font-weight: 400;
+}
+
+@media screen and (max-width: 950px) {
+    body{
+        font-size: 1rem;
+    }
+
+    .hero{
+        min-height: 100%;
+        height: 100%;
+        max-height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid red;
+    }
+    
+    .top {
+    flex-direction: column;
+    margin: 5em 0.5em 5em 0.5em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .topLeft{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-right: 0;
+ 
+    }
+
+    .topLeft__heading{
+        border: 1px solid red;
+        padding-right: inherit;
+        padding-left: 10%;
+        padding-right: 10%;
+        justify-content: center;
+        align-items: inherit;
+        font-size: 2rem;
+    }
+
+    .bottom{
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "left"
+        "center"
+        "right"
+        ;
+        bottom: 100%;
+        align-items: center;
+    }
+
+    .topRight{
+        width: 100%;
+    }
+
+    .topRight__rate1, .topRight__rate2, .topRight__rate3{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        line-height: 1.5em;
+        align-items: center;
+        align-self: center;
+        width: 90%;
+    }
+
+    .bottomLeft, .bottomCenter, .bottomRight{
+        width: 100%;
+        padding: 1em;
+        margin: 0;
+    }
+
+
+    .bottomLeft{
+
+    }
+    
+    .bottomCenter{
+
+    }
+    
+    .bottomRight{
+
+    }
+    
+}
