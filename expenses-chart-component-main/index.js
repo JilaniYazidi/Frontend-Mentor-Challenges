@@ -10,9 +10,3 @@ fetch(url)
     .then(function(data) {
         divChart.textContent = data;
     })
-
-    // test comit
-    a = 1;
-    b = 2;
-    c = a + b;
-    console.log(c);
