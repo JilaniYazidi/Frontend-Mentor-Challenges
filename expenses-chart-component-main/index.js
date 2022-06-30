@@ -5,7 +5,7 @@ const url = './data.json';
 
 fetch(url)
     .then(function(res){
-        return res.json();
+        return res.text();
     })
     .then(function(data) {
         divChart.textContent = data;
