@@ -1,5 +1,42 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#card{
+    border: 1px solid lightgreen;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr;
+    grid-row-gap: 20px;
+    grid-template-areas:
+    "hdcard"
+    "mncard"
+    ;
+}
+
+#headerCard{
+    grid-area: hdcard;
+    display: flex;
+    border: 1px solid green;
+    align-items: center;
+    width: 500px;
+}
+
+#mainCard{
+    grid-area: mncard;
+    border: 1px solid blue;
+    width: 500px;
+}
+
 #divChart{
     font-family: 'Courier New', Courier, monospace;
     color : red;
     font-size: 20px;
+    border : 1px solid red;
 }

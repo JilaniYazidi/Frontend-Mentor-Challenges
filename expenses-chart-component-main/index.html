@@ -16,28 +16,32 @@
   </style>
 </head>
 <body>
-<div id="headerCard">
-  <p class="smallestFont">My balance</p>
-  <div id="moneyLeft">$921.48</div>
-  <svg width="72" height="48" viewBox="0 0 72 48" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#382314" cx="48" cy="24" r="24"/><circle stroke="#FFF" stroke-width="2" cx="24" cy="24" r="23"/></g></svg>
-</div>
-<div id="mainCard">
-  <p id="lastSpend">Spending - Last 7 days</p>
-  <div id="divChart"></div>
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
+  <div id="card">
+    <div id="headerCard">
+      <span class="smallestFont">My balance</span>
+      <span id="moneyLeft">$921.48</span>
+      <svg width="72" height="48" viewBox="0 0 72 48" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#382314" cx="48" cy="24" r="24"/><circle stroke="#FFF" stroke-width="2" cx="24" cy="24" r="23"/></g></svg>
+    </div>
+    <div id="mainCard">
+      <p id="lastSpend">Spending - Last 7 days</p>
+      <div id="divChart"></div>
 
-  Total this month
-  $478.33
+        <span class="smallestFont">mon</span>
+        <span class="smallestFont">tue</span>
+        <span class="smallestFont">wed</span>
+        <span class="smallestFont">thu</span>
+        <span class="smallestFont">fri</span>
+        <span class="smallestFont">sat</span>
+        <span class="smallestFont">sun</span>
 
-  +2.4%
-  from last month
-</div>
+      <div id="cardFooter">
+        <p class="smallestFont">Total this month</p>
+        <span id="totalSpent">$478.33</span>
+        <span id="totalSpentPercent">+2.4%</span>
+        <span class="smallestFont">from last month</span>
+      </div>
+    </div>
+  </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Jilani Yazidi</a>.
