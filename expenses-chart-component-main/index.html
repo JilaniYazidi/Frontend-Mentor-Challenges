@@ -6,39 +6,43 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Expenses chart component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  
 </head>
 <body>
   <div id="card">
     <div id="headerCard">
-      <span class="smallestFont">My balance</span>
-      <span id="moneyLeft">$921.48</span>
+      <div class="headerCardText">
+        <span id="accountName" class="normalWhiteWeight">My balance</span>
+        <span id="moneyLeft" class="biggestFont">$921.48</span>
+      </div>
       <svg width="72" height="48" viewBox="0 0 72 48" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#382314" cx="48" cy="24" r="24"/><circle stroke="#FFF" stroke-width="2" cx="24" cy="24" r="23"/></g></svg>
     </div>
     <div id="mainCard">
-      <p id="lastSpend">Spending - Last 7 days</p>
+      <p id="lastSpend" class="brownFont">Spending - Last 7 days</p>
       <div id="divChart"></div>
 
-        <span class="smallestFont">mon</span>
-        <span class="smallestFont">tue</span>
-        <span class="smallestFont">wed</span>
-        <span class="smallestFont">thu</span>
-        <span class="smallestFont">fri</span>
-        <span class="smallestFont">sat</span>
-        <span class="smallestFont">sun</span>
+        <span class="normalWhiteWeight">mon</span>
+        <span class="normalWhiteWeight">tue</span>
+        <span class="normalWhiteWeight">wed</span>
+        <span class="normalWhiteWeight">thu</span>
+        <span class="normalWhiteWeight">fri</span>
+        <span class="normalWhiteWeight">sat</span>
+        <span class="normalWhiteWeight">sun</span>
 
       <div id="cardFooter">
-        <p class="smallestFont">Total this month</p>
-        <span id="totalSpent">$478.33</span>
-        <span id="totalSpentPercent">+2.4%</span>
-        <span class="smallestFont">from last month</span>
+        <div class="cardFooterLeft">
+          <p class="normalWhiteWeight">Total this month</p>
+          <span id="totalSpent" class="brownFont">$478.33</span>
+        </div>
+        <div class="cardFooterRight">
+          <p id="totalSpentPercent" class="brownFont">+2.4%</p>
+          <p class="normalWhiteWeight">from last month</p>
+        </div>
       </div>
     </div>
   </div>
