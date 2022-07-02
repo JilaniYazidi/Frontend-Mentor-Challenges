@@ -85,6 +85,9 @@ body{
     border-top: 2px solid hsl(27, 66%, 92%);
     display: flex;
     justify-content: space-between;
+    padding-top: 4%;
+    padding-bottom: 8%;
+    margin-top: 4%;
 }
 
 .cardFooterLeft{
