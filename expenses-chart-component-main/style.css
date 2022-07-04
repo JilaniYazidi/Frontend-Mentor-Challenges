@@ -62,7 +62,18 @@ body{
     font-family: 'Courier New', Courier, monospace;
     color : red;
     font-size: 20px;
-    border : 1px solid red;
+    /* border : 1px solid red; */
+/* lines belows are necessary to create my rectangles/bars chart using CSS */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: fit-content;
+}
+
+#daysLine{
+    display: flex;
+    justify-content: space-between;
+    color: hsl(28, 10%, 53%);
 }
 
 .normalWhiteWeight{
@@ -99,4 +110,57 @@ body{
 .cardFooterRight{
     display: flex;
     flex-direction: column;
+}
+
+/*rectangles using CSS*/
+
+
+
+#rect1{
+    /* height: 57.45px; */
+    width: 40px;
+    background-color: hsl(10, 79%, 65%);
+    border-radius: 5px;
+}
+
+#rect2{
+    height: 74.91px;
+    width: 40px;
+    background-color: hsl(10, 79%, 65%);
+    border-radius: 5px;
+}
+
+#rect3{
+    height: 92.36px;
+    width: 40px;
+    background-color: hsl(186, 34%, 60%);
+    border-radius: 5px;
+}
+
+#rect4{
+    height: 71.07px;
+    width: 40px;
+    background-color: hsl(10, 79%, 65%);
+    border-radius: 5px;
+}
+
+#rect5{
+    height: 63.39px;
+    width: 40px;
+    background-color: hsl(10, 79%, 65%);
+    border-radius: 5px;
+}
+
+#rect6{
+    height: 83.28px;
+    width: 40px;
+    background-color: hsl(10, 79%, 65%);
+    border-radius: 5px;
+}
+
+#rect7{
+    height: 65.48px;
+    width: 40px;
+    background-color: hsl(10, 79%, 65%);
+    border-radius: 5px;
 }
