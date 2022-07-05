@@ -1,6 +1,14 @@
 const divChart = document.querySelector('#divChart');
 const url = './data.json';
 const rect1 = document.querySelector('#rect1');
+const rect2 = document.querySelector('#rect2');
+const rect3 = document.querySelector('#rect3');
+const rect4 = document.querySelector('#rect4');
+const rect5 = document.querySelector('#rect5');
+const rect6 = document.querySelector('#rect6');
+const rect7 = document.querySelector('#rect7');
+const amounts = [];
+const myDays = [rect1, rect2, rect3, rect4, rect5, rect6, rect7];
 
 //Import of my datas from my JSON file
 
@@ -34,11 +42,25 @@ fetch(url)
         //     console.log(data[key]);
         // })
 
-        divChart.style.height = Math.max(...data.map(element => element.amount)) + "px";
-        rect1.style.height = data[0]["amount"] + '%';
+        // console.log(...data.map(element => element.amount))
 
-        //const myDays = [];
+// To set the highest value in 'amount' as a height for the container that contains my bar chart
+        // divChart.style.height = Math.max(...data.map(element => element.amount)) + "px";
+
         for(let i = 0; i < data.length; i++){
-            console.log(...data.map(element => element.amount))
+            amounts.push(data[i]['amount']);
+        }
+
+        divChart.style.height = Math.max(amounts) + 'px';
+
+// To set each one of my rectangles a % height of the container
+        for(i = 0; i < data.length; i++){
+            myDays[i].style.height = amounts[i] + '%';
+            console.log(myDays[i].style.height)
+            if(myDays[i] == Math.max(...data.map(element => element.amount))){
+                myDays[i].style.backgroundColor = "hsl(186, 34%, 60%)";
+            } else{
+                myDays[i].style.backgroundColor = "hsl(10, 79%, 65%)";
+            }
         }
     })
