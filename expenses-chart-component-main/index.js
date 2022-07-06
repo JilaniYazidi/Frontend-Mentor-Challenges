@@ -9,6 +9,7 @@ const rect6 = document.querySelector('#rect6');
 const rect7 = document.querySelector('#rect7');
 const amounts = [];
 const myDays = [rect1, rect2, rect3, rect4, rect5, rect6, rect7];
+let max;
 
 //Import of my datas from my JSON file
 
@@ -45,22 +46,36 @@ fetch(url)
         // console.log(...data.map(element => element.amount))
 
 // To set the highest value in 'amount' as a height for the container that contains my bar chart
-        // divChart.style.height = Math.max(...data.map(element => element.amount)) + "px";
 
         for(let i = 0; i < data.length; i++){
             amounts.push(data[i]['amount']);
         }
 
-        divChart.style.height = Math.max(amounts) + 'px';
+        divChart.style.height = Math.max(...amounts) + 'px';
+
+        
 
 // To set each one of my rectangles a % height of the container
         for(i = 0; i < data.length; i++){
-            myDays[i].style.height = amounts[i] + '%';
-            console.log(myDays[i].style.height)
-            if(myDays[i] == Math.max(...data.map(element => element.amount))){
-                myDays[i].style.backgroundColor = "hsl(186, 34%, 60%)";
-            } else{
+            myDays[i].style.height = amounts[i] + 'px'; //définit la taille de chaque rectangle en pixel
+        }
+
+        findMax(amounts);
+
+        function findMax(amounts, max){
+            max = Math.max(...amounts) + 'px';
+            for(i = 0; i < data.length; i++){
+                if(max == myDays[i].style.height){
+                    myDays[i].style.backgroundColor = "hsl(186, 34%, 60%)";
+                } else{
                 myDays[i].style.backgroundColor = "hsl(10, 79%, 65%)";
+                }
             }
         }
+
+        //hover effect
+        
+
+
+        // myDays.forEach
     })

@@ -114,53 +114,52 @@ body{
 
 /*rectangles using CSS*/
 
-
+.squares{
+    width: 70px;
+    height: 40px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 10;
+}
 
 #rect1{
     /* height: 57.45px; */
     width: 40px;
-    background-color: hsl(10, 79%, 65%);
     border-radius: 5px;
 }
 
 #rect2{
     /* height: 74.91px; */
     width: 40px;
-    background-color: hsl(10, 79%, 65%);
     border-radius: 5px;
 }
 
 #rect3{
     /* height: 92.36px; */
     width: 40px;
-    background-color: hsl(186, 34%, 60%);
     border-radius: 5px;
 }
 
 #rect4{
     /* height: 71.07px; */
     width: 40px;
-    background-color: hsl(10, 79%, 65%);
     border-radius: 5px;
 }
 
 #rect5{
     /* height: 63.39px; */
     width: 40px;
-    background-color: hsl(10, 79%, 65%);
     border-radius: 5px;
 }
 
 #rect6{
     /* height: 83.28px; */
     width: 40px;
-    background-color: hsl(10, 79%, 65%);
     border-radius: 5px;
 }
 
 #rect7{
     /* height: 65.48px; */
     width: 40px;
-    background-color: hsl(10, 79%, 65%);
     border-radius: 5px;
 }
