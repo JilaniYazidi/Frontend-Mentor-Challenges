@@ -9,6 +9,7 @@ const rect6 = document.querySelector('#rect6');
 const rect7 = document.querySelector('#rect7');
 const amounts = [];
 const myDays = [rect1, rect2, rect3, rect4, rect5, rect6, rect7];
+const myRects = document.querySelectorAll('.rect');
 let max;
 
 //Import of my datas from my JSON file
@@ -74,7 +75,14 @@ fetch(url)
         }
 
         //hover effect
-        
+        myRects.addEventListener("mouseover", toolTipValue);
+
+        function toolTipValue(){
+            for(i = 0; i < amounts.length; i++){
+                console.log('oui');
+                console.log(amounts[i]);
+            }
+        }
 
 
         // myDays.forEach
