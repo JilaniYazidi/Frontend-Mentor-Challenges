@@ -9,7 +9,7 @@ const rect6 = document.querySelector('#rect6');
 const rect7 = document.querySelector('#rect7');
 const amounts = [];
 const myDays = [rect1, rect2, rect3, rect4, rect5, rect6, rect7];
-const myRects = document.querySelectorAll('.rect');
+const myToolTips = document.querySelectorAll('.tooltips');
 let max;
 
 //Import of my datas from my JSON file
@@ -59,6 +59,8 @@ fetch(url)
 // To set each one of my rectangles a % height of the container
         for(i = 0; i < data.length; i++){
             myDays[i].style.height = amounts[i] + 'px'; //définit la taille de chaque rectangle en pixel
+            myDays[i].style.cursor = "pointer";
+            myDays[i].addEventListener("mouseover", toolTipValue);
         }
 
         findMax(amounts);
@@ -75,13 +77,11 @@ fetch(url)
         }
 
         //hover effect
-        myRects.addEventListener("mouseover", toolTipValue);
+        // myRects.addEventListener("mouseover", toolTipValue);
 
         function toolTipValue(){
-            for(i = 0; i < amounts.length; i++){
-                console.log('oui');
-                console.log(amounts[i]);
-            }
+            myToolTips.style.visibility = "visible";
+            console.log("oui");
         }
 
 
