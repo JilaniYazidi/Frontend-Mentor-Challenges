@@ -67,6 +67,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    position: relative;
     
 }
 
@@ -116,16 +117,20 @@ body{
 
 .tooltips{
     position: absolute;
-    z-index: 1;
-    display: inline-block;
-    visibility: hidden;
-    width: fit-content;
+    width: 50px;
     background-color: black;
     color: #fff;
     text-align: center;
     padding: 5px 0px;
     border-radius: 5px;
+    top: 0px;
+    /* display: none; */
 
+}
+
+.tooltips::after, .tooltips::before{
+    content: "";
+    position: absolute;
 }
 
 #rect1{

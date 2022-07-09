@@ -60,7 +60,7 @@ fetch(url)
         for(i = 0; i < data.length; i++){
             myDays[i].style.height = amounts[i] + 'px'; //définit la taille de chaque rectangle en pixel
             myDays[i].style.cursor = "pointer";
-            myDays[i].addEventListener("mouseover", toolTipValue);
+            myDays[i].addEventListener("mouseover", () => toolTipValue(myDays[i]));
         }
 
         findMax(amounts);
@@ -80,7 +80,7 @@ fetch(url)
         // myRects.addEventListener("mouseover", toolTipValue);
 
         function toolTipValue(){
-            myToolTips.style.visibility = "visible";
+            rect1.style.display = "block";
             console.log("oui");
         }
 
