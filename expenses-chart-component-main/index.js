@@ -11,6 +11,7 @@ const amounts = [];
 const myDays = [rect1, rect2, rect3, rect4, rect5, rect6, rect7];
 const myToolTips = document.querySelectorAll('.tooltips');
 let max;
+let day;
 
 //Import of my datas from my JSON file
 
@@ -52,7 +53,7 @@ fetch(url)
             amounts.push(data[i]['amount']);
         }
 
-        divChart.style.height = Math.max(...amounts) + 'px';
+        divChart.style.height = (Math.max(...amounts) + 100) + 'px';
 
         
 
@@ -79,9 +80,16 @@ fetch(url)
         //hover effect
         // myRects.addEventListener("mouseover", toolTipValue);
 
-        function toolTipValue(){
-            rect1.style.display = "block";
-            console.log("oui");
+        function toolTipValue(day){
+            
+            for(day of myDays){
+                // console.log(day);
+                // console.log(myToolTips);
+
+                myToolTips.style.display = "initial";
+                // console.log("oui");
+            }
+            
         }
 
 

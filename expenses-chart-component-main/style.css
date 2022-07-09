@@ -59,7 +59,7 @@ body{
 }
 
 #divChart{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'DM Sans', sans-serif;
     color : red;
     font-size: 20px;
     /* border : 1px solid red; */
@@ -71,10 +71,11 @@ body{
     
 }
 
-#daysLine{
+.days{
     display: flex;
     justify-content: space-between;
     color: hsl(28, 10%, 53%);
+    
 }
 
 .normalWhiteWeight{
@@ -118,13 +119,14 @@ body{
 .tooltips{
     position: absolute;
     width: 50px;
+    font-size: 18px;
     background-color: black;
     color: #fff;
     text-align: center;
     padding: 5px 0px;
     border-radius: 5px;
-    top: 0px;
-    /* display: none; */
+    top: -60px;
+    display: none;
 
 }
 
@@ -137,40 +139,51 @@ body{
     /* height: 57.45px; */
     width: 40px;
     border-radius: 5px;
+    position: relative;
 }
 
 #rect2{
     /* height: 74.91px; */
     width: 40px;
     border-radius: 5px;
+    position: relative;
 }
 
 #rect3{
     /* height: 92.36px; */
     width: 40px;
     border-radius: 5px;
+    position: relative;
+
 }
 
 #rect4{
     /* height: 71.07px; */
     width: 40px;
     border-radius: 5px;
+    position: relative;
+
 }
 
 #rect5{
     /* height: 63.39px; */
     width: 40px;
     border-radius: 5px;
+    position: relative;
+
 }
 
 #rect6{
     /* height: 83.28px; */
     width: 40px;
     border-radius: 5px;
+    position: relative;
+
 }
 
 #rect7{
     /* height: 65.48px; */
     width: 40px;
     border-radius: 5px;
+    position: relative;
 }
