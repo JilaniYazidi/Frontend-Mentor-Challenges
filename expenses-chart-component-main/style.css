@@ -127,6 +127,7 @@ body{
     border-radius: 5px;
     top: -60px;
     display: none;
+    content: "";
 
 }
 
