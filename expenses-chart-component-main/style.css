@@ -130,6 +130,8 @@ body{
     top: -60px;
     content: "";
     display: none;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .tooltips::after, .tooltips::before{
