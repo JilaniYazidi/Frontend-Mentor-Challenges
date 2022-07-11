@@ -65,10 +65,10 @@ fetch(url)
     divChart.style.height = Math.max(...amounts) + 100 + "px";
 
     // To set each one of my rectangles a % height of the container
-    for (i = 0; i < data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
       myDays[i].style.height = amounts[i] + "px"; //définit la taille de chaque rectangle en pixel
       myDays[i].style.cursor = "pointer";
-      myDays[i].addEventListener("mouseover", () => toolTipValue(myDays[i]));
+      myDays[i].addEventListener("mouseover", () => showToolTip(myDays[i]));
     //   myDays[i].addEventListener("mouseover", toolTipValue);
 
     }
@@ -77,7 +77,7 @@ fetch(url)
 
     function findMax(amounts, max) {
       max = Math.max(...amounts) + "px";
-      for (i = 0; i < data.length; i++) {
+      for (let i = 0; i < data.length; i++) {
         if (max == myDays[i].style.height) {
           myDays[i].style.backgroundColor = "hsl(186, 34%, 60%)";
         } else {
@@ -89,14 +89,9 @@ fetch(url)
     //hover effect
     // myRects.addEventListener("mouseover", toolTipValue);
 
-    function toolTipValue(day) {
+    function showToolTip(i) {
       
-        for(let day of myDays){
-            // day.forEach(console.log(day))
-            // console.log(`${}`);
-            
-            day.style.display = "initial";
-        }
+        myDays[i].querySelector('.tooltips').style.display = "block";
         // console.log(myToolTips);
         // myToolTips[i].style.display = "initial";
         // console.log("oui");
