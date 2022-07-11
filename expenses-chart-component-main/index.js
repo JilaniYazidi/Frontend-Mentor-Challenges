@@ -9,53 +9,16 @@ const rect6 = document.querySelector("#rect6");
 const rect7 = document.querySelector("#rect7");
 const amounts = [];
 const myDays = [rect1, rect2, rect3, rect4, rect5, rect6, rect7];
-// const myToolTips = document.querySelectorAll(".tooltips");
-const ttrect1 = document.querySelector("ttrect1");
-const ttrect2 = document.querySelector("ttrect2");
-const ttrect3 = document.querySelector("ttrect3");
-const ttrect4 = document.querySelector("ttrect4");
-const ttrect5 = document.querySelector("ttrect5");
-const ttrect6 = document.querySelector("ttrect6");
-const ttrect7 = document.querySelector("ttrect7");
-
-const myToolTips = [ttrect1, ttrect2, ttrect3, ttrect4, ttrect5, ttrect6, ttrect7];
 let max;
 
 
 //Import of my datas from my JSON file
-
 fetch(url)
   .then(function (res) {
     return res.json();
   })
   .then(function (data) {
-    // console.log(data[0]['amount'])
-    // console.log(data.length);
-
-    // console.log(Object.values(data));
-
-    // for (const key of Object.values(data)){
-    //     console.log(key)
-    // }
-
-    // console.log(Math.max(...data.map(element => element.amount)));
-
-    // data.forEach(element => {
-    //     console.log(Math.max(element.amount))
-
-    // });
-
-    // for(let i = 0; i < data.length; i++){
-    //     console.log()
-    // }
-
-    // Object.keys(data).forEach(key => {
-    //     // console.log(key);
-    //     console.log(data[key]);
-    // })
-
-    // console.log(...data.map(element => element.amount))
-
+    
     // To set the highest value in 'amount' as a height for the container that contains my bar chart
 
     for (let i = 0; i < data.length; i++) {
@@ -67,9 +30,10 @@ fetch(url)
     // To set each one of my rectangles a % height of the container
     for (let i = 0; i < data.length; i++) {
       myDays[i].style.height = amounts[i] + "px"; //définit la taille de chaque rectangle en pixel
+      myDays[i].querySelector('.tooltips').innerHTML = `$${amounts[i]}`;
       myDays[i].style.cursor = "pointer";
       myDays[i].addEventListener("mouseover", () => showToolTip(myDays[i]));
-    //   myDays[i].addEventListener("mouseover", toolTipValue);
+      myDays[i].addEventListener("mouseout", () => hideToolTip(myDays[i]));
 
     }
 
@@ -86,17 +50,14 @@ fetch(url)
       }
     }
 
-    //hover effect
-    // myRects.addEventListener("mouseover", toolTipValue);
+    //hover effects
 
-    function showToolTip(i) {
-      
-        myDays[i].querySelector('.tooltips').style.display = "block";
-        // console.log(myToolTips);
-        // myToolTips[i].style.display = "initial";
-        // console.log("oui");
-      
+    function showToolTip(day) {
+        day.querySelector('.tooltips').style.display = "block";
     }
 
-    // myDays.forEach
+    function hideToolTip(day) {
+      day.querySelector('.tooltips').style.display = "none";      
+    }
+
   });

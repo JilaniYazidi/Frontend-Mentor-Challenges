@@ -68,6 +68,7 @@ body{
     justify-content: space-between;
     align-items: flex-end;
     position: relative;
+    text-align: center;
     
 }
 
@@ -118,18 +119,16 @@ body{
 
 .tooltips{
     position: absolute;
-    width: 50px;
+    width: 70px;
+    height: 30px;
     font-size: 18px;
+    font-weight: 700;
     background-color: black;
     color: #fff;
-    text-align: center;
     padding: 5px 0px;
     border-radius: 5px;
     top: -60px;
     content: "";
-}
-
-#ttrect1, #ttrect2, #ttrect3, #ttrect4, #ttrect5, #ttrect6, #ttrect7{
     display: none;
 }
 
@@ -138,55 +137,14 @@ body{
     position: absolute;
 }
 
-#rect1{
-    /* height: 57.45px; */
-    width: 40px;
+#rect1, #rect2, #rect3, #rect4, #rect5, #rect6, #rect7{
+    width: 50px;
     border-radius: 5px;
     position: relative;
+    text-align: center;
 }
 
-#rect2{
-    /* height: 74.91px; */
-    width: 40px;
-    border-radius: 5px;
-    position: relative;
-}
-
-#rect3{
-    /* height: 92.36px; */
-    width: 40px;
-    border-radius: 5px;
-    position: relative;
-
-}
-
-#rect4{
-    /* height: 71.07px; */
-    width: 40px;
-    border-radius: 5px;
-    position: relative;
-
-}
-
-#rect5{
-    /* height: 63.39px; */
-    width: 40px;
-    border-radius: 5px;
-    position: relative;
-
-}
-
-#rect6{
-    /* height: 83.28px; */
-    width: 40px;
-    border-radius: 5px;
-    position: relative;
-
-}
-
-#rect7{
-    /* height: 65.48px; */
-    width: 40px;
-    border-radius: 5px;
-    position: relative;
+.days{
+    justify-content: center;
+    align-items: center;
 }
