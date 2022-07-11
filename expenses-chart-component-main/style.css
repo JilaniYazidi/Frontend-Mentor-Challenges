@@ -126,9 +126,11 @@ body{
     padding: 5px 0px;
     border-radius: 5px;
     top: -60px;
-    display: none;
     content: "";
+}
 
+#ttrect1, #ttrect2, #ttrect3, #ttrect4, #ttrect5, #ttrect6, #ttrect7{
+    display: none;
 }
 
 .tooltips::after, .tooltips::before{

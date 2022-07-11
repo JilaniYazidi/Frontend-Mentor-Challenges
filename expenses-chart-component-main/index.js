@@ -9,7 +9,16 @@ const rect6 = document.querySelector("#rect6");
 const rect7 = document.querySelector("#rect7");
 const amounts = [];
 const myDays = [rect1, rect2, rect3, rect4, rect5, rect6, rect7];
-const myToolTips = document.querySelectorAll(".tooltips");
+// const myToolTips = document.querySelectorAll(".tooltips");
+const ttrect1 = document.querySelector("ttrect1");
+const ttrect2 = document.querySelector("ttrect2");
+const ttrect3 = document.querySelector("ttrect3");
+const ttrect4 = document.querySelector("ttrect4");
+const ttrect5 = document.querySelector("ttrect5");
+const ttrect6 = document.querySelector("ttrect6");
+const ttrect7 = document.querySelector("ttrect7");
+
+const myToolTips = [ttrect1, ttrect2, ttrect3, ttrect4, ttrect5, ttrect6, ttrect7];
 let max;
 
 
@@ -80,13 +89,13 @@ fetch(url)
     //hover effect
     // myRects.addEventListener("mouseover", toolTipValue);
 
-    function toolTipValue() {
+    function toolTipValue(day) {
       
         for(let day of myDays){
             // day.forEach(console.log(day))
             // console.log(`${}`);
             
-            // console.log(myToolTips);
+            day.style.display = "initial";
         }
         // console.log(myToolTips);
         // myToolTips[i].style.display = "initial";
