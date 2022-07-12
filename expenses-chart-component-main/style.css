@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 body{
     margin: 0;
     padding: 0;
@@ -75,7 +78,9 @@ body{
     display: flex;
     justify-content: space-between;
     color: hsl(28, 10%, 53%);
-    
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
 }
 
 .normalWhiteWeight{
@@ -114,8 +119,6 @@ body{
     flex-direction: column;
 }
 
-/*rectangles using CSS*/
-
 .tooltips{
     position: absolute;
     width: 70px;
@@ -149,11 +152,6 @@ body{
     filter: brightness(150%);
 }
 
-.days{
-    justify-content: center;
-    align-items: center;
-}
-
 @media screen and (max-width:580px){
     body{
         margin: 0;
@@ -176,7 +174,7 @@ body{
         padding-right: 5%; */
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 4fr;
-        grid-row-gap: 3%;
+        grid-gap: 3%;
         grid-template-areas:
         "hdcard"
         "mncard"
@@ -197,6 +195,8 @@ body{
         justify-content: space-between;
         padding: 5% 5%;
         width: 100%;
+        box-sizing: border-box;
+
     }
 
     #mainCard{
@@ -206,6 +206,8 @@ body{
         width: 100%;
         height: 60vh;
         padding: 5% 5%;
+        box-sizing: border-box;
+
     }
     
     #divChart{
@@ -226,7 +228,7 @@ body{
     }
 
     #rect1, #rect2, #rect3, #rect4, #rect5, #rect6, #rect7{
-        width: 100%;
+        width: 35px;
     }
 
 }
