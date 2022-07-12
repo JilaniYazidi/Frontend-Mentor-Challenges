@@ -29,7 +29,7 @@ fetch(url)
 
     // To set each one of my rectangles a % height of the container
     for (let i = 0; i < data.length; i++) {
-      myDays[i].style.height = amounts[i] + "px"; //définit la taille de chaque rectangle en pixel
+      myDays[i].style.height = (amounts[i]*2) + "px"; //définit la taille de chaque rectangle en pixel
       myDays[i].querySelector('.tooltips').innerHTML = `$${amounts[i]}`;
       myDays[i].style.cursor = "pointer";
       myDays[i].addEventListener("mouseover", () => showToolTip(myDays[i]));
@@ -40,7 +40,7 @@ fetch(url)
     findMax(amounts);
 
     function findMax(amounts, max) {
-      max = Math.max(...amounts) + "px";
+      max = (Math.max(...amounts))*2 + "px";
       for (let i = 0; i < data.length; i++) {
         if (max == myDays[i].style.height) {
           myDays[i].style.backgroundColor = "hsl(186, 34%, 60%)";
@@ -59,5 +59,4 @@ fetch(url)
     function hideToolTip(day) {
       day.querySelector('.tooltips').style.display = "none";      
     }
-
   });
