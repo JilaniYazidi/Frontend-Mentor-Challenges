@@ -49,10 +49,6 @@ body{
     flex-direction: column;
 }
 
-#moneyLeft{
-    
-}
-
 #mainCard{
     grid-area: mncard;
     border-radius: 20px;
@@ -64,8 +60,6 @@ body{
 #divChart{
     font-family: 'DM Sans', sans-serif;
     font-size: 20px;
-    /* border : 1px solid red; */
-/* lines belows are necessary to create my rectangles/bars chart using CSS */
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -153,50 +147,14 @@ body{
 }
 
 @media screen and (max-width:580px){
-    body{
-        margin: 0;
-        padding: 0;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-family: 'DM Sans', sans-serif;
-        background-color: hsl(27, 66%, 92%);
-    }
-
+    
     #card{
-        display: grid;
-        /* margin: auto; */
         width: 80%;
         height: auto;
-        /* padding-left: 5%;
-        padding-right: 5%; */
+        padding-right: 5%;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 4fr;
         grid-gap: 3%;
-        grid-template-areas:
-        "hdcard"
-        "mncard"
-        ;
-    }
-    
-    #headerCard{
-        grid-area: hdcard;
-        display: flex;
-        border-radius: 20px;
-        align-items: center;
-        /* width: auto; */
-        color: hsl(33, 100%, 98%);
-        background-color: hsl(10, 79%, 65%);
-        font-size: 30px;
-        font-weight: 700;
-        display: flex;
-        justify-content: space-between;
-        padding: 5% 5%;
-        width: 100%;
-        box-sizing: border-box;
-
     }
 
     #mainCard{
@@ -206,24 +164,9 @@ body{
         width: 100%;
         height: 60vh;
         padding: 5% 5%;
-        box-sizing: border-box;
-
-    }
-    
-    #divChart{
-        font-family: 'DM Sans', sans-serif;
-        font-size: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        position: relative;
-        text-align: center;
-        
     }
     
     #cardFooter{
-        display: flex;
-        justify-content: space-between;
         padding-top: 10%;
     }
 
