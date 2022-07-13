@@ -12,7 +12,7 @@ const myDays = [rect1, rect2, rect3, rect4, rect5, rect6, rect7];
 let max;
 
 
-//Import of my datas from my JSON file
+
 fetch(url)
   .then(function (res) {
     return res.json();
