@@ -1,15 +1,5 @@
 const divChart = document.querySelector("#divChart");
 const url = "./data.json";
-const rect1 = document.querySelector("#rect1");
-const rect2 = document.querySelector("#rect2");
-const rect3 = document.querySelector("#rect3");
-const rect4 = document.querySelector("#rect4");
-const rect5 = document.querySelector("#rect5");
-const rect6 = document.querySelector("#rect6");
-const rect7 = document.querySelector("#rect7");
-const amounts = [];
-const myDays = [rect1, rect2, rect3, rect4, rect5, rect6, rect7];
-let max;
 
 
 
@@ -19,38 +9,47 @@ fetch(url)
   })
   .then(function (data) {
     
-    // To set the highest value in 'amount' as a height for the container that contains my bar chart
+    divChart.style.height = findMaxHeight(data) + 100 + "px";
 
     for (let i = 0; i < data.length; i++) {
-      amounts.push(data[i]["amount"]);
+      let day = document.querySelector("#rect" + (i+1));
+      let amount = data[i]["amount"];
+      
+      setParameters(amount, day);
+      setEvent(day);
     }
 
-    divChart.style.height = Math.max(...amounts) + 100 + "px";
+    setRectanglesColors(data);
 
-    // To set each one of my rectangles a % height of the container
-    for (let i = 0; i < data.length; i++) {
-      myDays[i].style.height = (amounts[i]*2) + "px"; //définit la taille de chaque rectangle en pixel
-      myDays[i].querySelector('.tooltips').innerHTML = `$${amounts[i]}`;
-      myDays[i].style.cursor = "pointer";
-      myDays[i].addEventListener("mouseover", () => showToolTip(myDays[i]));
-      myDays[i].addEventListener("mouseout", () => hideToolTip(myDays[i]));
-
+    function setParameters(amount, day){
+      //height is multiplied by 2 to set my rectangles bigger on the bar chart (design choice)
+      day.style.height = (amount*2) + "px"; 
+      day.querySelector('.tooltips').innerHTML = `$${amount}`;
     }
 
-    findMax(amounts);
+    function setEvent(day){
+      day.addEventListener("mouseover", () => showToolTip(day));
+      day.addEventListener("mouseout", () => hideToolTip(day));
+    }
 
-    function findMax(amounts, max) {
-      max = (Math.max(...amounts))*2 + "px";
+    function findMaxHeight(data){
+      let amounts = [];
       for (let i = 0; i < data.length; i++) {
-        if (max == myDays[i].style.height) {
-          myDays[i].style.backgroundColor = "hsl(186, 34%, 60%)";
-        } else {
-          myDays[i].style.backgroundColor = "hsl(10, 79%, 65%)";
-        }
+        amounts.push(data[i]["amount"]);
+      }
+      return Math.max(...amounts);
+    }
+
+    function setRectanglesColors(data) {
+      let max = (findMaxHeight(data))*2 + "px";
+      for (let i = 0; i < data.length; i++) {
+        let day = document.querySelector("#rect" + (i+1));
+        day.style.backgroundColor = "hsl(10, 79%, 65%)";
+        if (max == day.style.height) {
+          day.style.backgroundColor = "hsl(186, 34%, 60%)";
+        } 
       }
     }
-
-    //hover effects
 
     function showToolTip(day) {
         day.querySelector('.tooltips').style.display = "block";

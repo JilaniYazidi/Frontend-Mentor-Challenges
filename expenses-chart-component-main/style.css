@@ -140,6 +140,7 @@ body{
     border-radius: 5px;
     position: relative;
     text-align: center;
+    cursor: pointer;
 }
 
 .myRectangles:hover{

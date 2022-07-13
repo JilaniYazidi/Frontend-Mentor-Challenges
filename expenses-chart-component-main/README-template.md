@@ -52,21 +52,18 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- CSS3 custom properties
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- JavaScript (basics)
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This challenge was very interesting because I've learned how to use data from a JSON file using the fetch() API. It was also great because for the first time I've used JavaScript in a challenge, so I've practiced many basics like functions, for loops, if statements, hover, variables declarations, and I've also created some tooltips for the first time. The most difficult part for me was the beginning to understand how the responses works, but now I feel I'm able to use it. I've try to refacto my code to make it cleaner, so please feel free to give me your opinion :)
 
-To see how you can add code snippets, see below:
 
 ```html
 <h1>Some HTML code I'm proud of</h1>
