@@ -1,0 +1,16 @@
+{
+  "name": "ecommerce-product-page-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the E-commerce product page coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node-sass styles --output styles",
+    "watch": "node-sass --watch styles --output styles"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
