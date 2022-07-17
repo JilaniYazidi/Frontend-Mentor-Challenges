@@ -3,5 +3,94 @@
   padding: 0;
   box-sizing: border-box; }
 
+html, body {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 16px; }
+
 body {
-  font-family: 'Kumbh Sans', sans-serif; }
+  height: 100vh;
+  background-color: #f7f8fd; }
+
+@media screen and (max-width: 480px) {
+  #myHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em; }
+  .shoesPictures {
+    max-width: 100%;
+    height: 30%; }
+  #userPicture {
+    width: 2em; }
+  .rightPart {
+    margin: 7%;
+    font-size: 16px; }
+  h1, #currentPrice {
+    font-size: 2em;
+    font-weight: 700;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em; }
+  .greyFont {
+    font-size: 1em;
+    color: #68707d;
+    line-height: 1.5em; }
+  #oldPrice {
+    color: #b6bcc8;
+    text-decoration: line-through;
+    align-self: center; }
+  h3 {
+    text-transform: uppercase;
+    color: #ff7d1a;
+    display: inline-block;
+    font-size: 1em;
+    letter-spacing: 0.1rem;
+    background-color: #ffede0; }
+  #currentPrice, #oldPrice, #discount {
+    display: inline-block; }
+  #discount {
+    color: #ff7d1a;
+    background-color: #ffede0;
+    padding: 0.25em 0.5em;
+    border-radius: 20%;
+    margin-left: 1em; }
+  .aboutPrice {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 1em;
+    margin-bottom: 1em; }
+  #discount, #numberOfArticle, #callToAction, #oldPrice {
+    font-size: 1.2em;
+    font-weight: 700; }
+  .quantity {
+    background-color: #EFEFEF;
+    border-radius: 0.7rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    justify-content: space-between;
+    height: 4rem; }
+  .quantity #minusBtn {
+    border-radius: 0.7rem 0 0 0.7rem; }
+  .quantity #plusBtn {
+    border-radius: 0 0.7rem 0.7rem 0; }
+  .quantity #minusBtn, .quantity #plusBtn {
+    border: none; }
+  .quantity #numberOfArticle {
+    align-self: center; }
+  #callToAction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+    border-radius: 0.7rem;
+    border: none;
+    background-color: #ff7d1a;
+    box-shadow: 0px 20px 20px #ffede0;
+    color: #ffede0; }
+  #callToAction p {
+    display: inline-block;
+    padding-left: 1em; } }
