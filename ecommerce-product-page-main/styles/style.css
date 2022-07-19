@@ -27,15 +27,13 @@ body {
     background-color: #f7f8fd;
     transition: left 0.5s ease; }
   .sideNav a {
-    padding: 8px 8px 8px 32px;
+    padding: 20px 8px 8px 32px;
     text-decoration: none;
     font-size: 20px;
     color: black;
     font-weight: 700;
     display: block;
     transition: 0.3s; }
-  .sideNav a:hover {
-    color: #111; }
   .sideNav ul {
     list-style-type: none;
     padding-top: 40px;
@@ -55,8 +53,30 @@ body {
     height: 2px;
     background-color: black;
     margin: 6px 0; }
-  .shoesPictures {
+  #carrousel {
+    width: 100%;
+    position: relative; }
+  #carrouselContainer {
     width: 100%; }
+  #leftBtn, #rightBtn {
+    background-color: white;
+    padding: 10px 12px;
+    border-radius: 20px;
+    position: absolute;
+    top: 230px; }
+  #leftBtn {
+    left: 20px; }
+  #leftBtn:active {
+    transform: scale(1.1);
+    transition: all 0.3s ease; }
+  #rightBtn {
+    right: 20px; }
+  #rightBtn:active {
+    transform: scale(1.1);
+    transition: all 0.3s ease; }
+  .shoesPictures {
+    width: 100%;
+    height: 400px; }
   #userPicture {
     width: 2em; }
   .rightPart {
