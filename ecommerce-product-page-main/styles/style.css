@@ -74,9 +74,13 @@ body {
   #rightBtn:active {
     transform: scale(1.1);
     transition: all 0.3s ease; }
-  .shoesPictures {
+  .carrouselContainer img {
     width: 100%;
-    height: 400px; }
+    height: 400px;
+    display: none; }
+  .carrouselContainer img.active {
+    display: block;
+    animation: fade 0.8s; }
   #userPicture {
     width: 2em; }
   .rightPart {
@@ -150,4 +154,9 @@ body {
     color: #ffede0; }
   #callToAction p {
     display: inline-block;
-    padding-left: 1em; } }
+    padding-left: 1em; }
+  @keyframes fade {
+    from {
+      opacity: 0; }
+    to {
+      opacity: 1; } } }

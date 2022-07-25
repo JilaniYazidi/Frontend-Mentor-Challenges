@@ -106,10 +106,17 @@ body{
         }
     }
 
-    .shoesPictures{
+    .carrouselContainer img{
         width: 100%;
         height: 400px;
+        display: none;
+        &.active{
+            display: block;
+            animation: fade 0.8s;
+        }
     }
+
+
 
     #userPicture{
         width: 2em;
@@ -215,7 +222,14 @@ body{
             }
     }
 
-
-
+    @keyframes fade{
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+ 
 
 }
