@@ -1,11 +1,15 @@
 const sideNav = document.querySelector("#mySideNav");
 const openBtn = document.querySelector("#openBtn");
 const closeBtn = document.querySelector("#closeBtn");
-const items = document.querySelectorAll("img");
+const items = document.querySelectorAll("img"); // need to change that selector, because I have others img
 const nbSlide = items.length;
 const leftBtn = document.querySelector("#leftBtn");
 const rightBtn = document.querySelector("#rightBtn");
 let count = 0;
+let qty = document.querySelector("#numberOfArticle");
+const plus = document.querySelector("#plusBtn");
+const minus = document.querySelector("#minusBtn");
+
 
 // console.log(items.length);
 
@@ -48,7 +52,6 @@ leftBtn.addEventListener('click', slidePrecedente);
 
 
 
-
 /* Set the width of the side navigation to 250px */
 function openNav() {
   sideNav.classList.add("active");  
@@ -59,3 +62,17 @@ function closeNav() {
   sideNav.classList.remove("active");
 }
 
+
+
+plusBtn.addEventListener('click', increaseQty);
+minusBtn.addEventListener('click', decreaseQty);
+
+function increaseQty(){
+  Number(qty.innerHTML++);
+}
+
+function decreaseQty(){
+  if(qty.innerHTML > 0){
+    Number(qty.innerHTML--);
+  }
+}
