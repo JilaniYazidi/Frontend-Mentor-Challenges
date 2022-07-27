@@ -1,7 +1,7 @@
 const sideNav = document.querySelector("#mySideNav");
 const openBtn = document.querySelector("#openBtn");
 const closeBtn = document.querySelector("#closeBtn");
-const items = document.querySelectorAll("img"); // need to change that selector, because I have others img
+const items = document.querySelectorAll(".carrouselContainer img"); // need to change that selector, because I have others img
 const nbSlide = items.length;
 const leftBtn = document.querySelector("#leftBtn");
 const rightBtn = document.querySelector("#rightBtn");

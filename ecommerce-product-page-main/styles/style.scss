@@ -10,12 +10,15 @@ html, body{
 }
 
 body{
-    height: 100vh;
     background-color: hsl(223, 64%, 98%);
 }
 
 @media screen and (max-width: 480px){
     
+    #darkBackground{
+        
+    }
+
     #myHeader{
         display: flex;
         justify-content: space-between;
