@@ -13,7 +13,11 @@ body {
 @media screen and (max-width: 480px) {
   #darkBackground {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.7); }
+    z-index: 2000;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    visibility: hidden; }
   #myHeader {
     display: flex;
     justify-content: space-between;
@@ -23,7 +27,7 @@ body {
     height: 100%;
     width: 250px;
     position: fixed;
-    z-index: 1;
+    z-index: 5000;
     top: 0;
     left: -250px;
     background-color: #f7f8fd;

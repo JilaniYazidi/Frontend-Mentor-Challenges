@@ -1,7 +1,7 @@
 const sideNav = document.querySelector("#mySideNav");
 const openBtn = document.querySelector("#openBtn");
 const closeBtn = document.querySelector("#closeBtn");
-const items = document.querySelectorAll(".carrouselContainer img"); // need to change that selector, because I have others img
+const items = document.querySelectorAll(".carrouselContainer img");
 const nbSlide = items.length;
 const leftBtn = document.querySelector("#leftBtn");
 const rightBtn = document.querySelector("#rightBtn");
@@ -80,13 +80,13 @@ function decreaseQty(){
 }
 
 
-openBtn.addEventListener('click', darkBackground);
-closeBtn.addEventListener('click', lightBackground);
+openBtn.addEventListener('click', () => darkerBackground(darkBackground));
+closeBtn.addEventListener('click', () => lightBackground(darkBackground));
 
-// function darkBackground(darkBackground){
-//   darkBackground.style.backgroundColor = 'hsla(0, 0%, 0%, 0.75)';
-// }
+function darkerBackground(darkBackground){
+  darkBackground.style.visibility = "visible";
+}
 
-// function lightBackground(darkBackground){
-//   darkBackground.style.backgroundColor = 'initial';
-// }
+function lightBackground(darkBackground){
+  darkBackground.style.visibility = "hidden";
+}
