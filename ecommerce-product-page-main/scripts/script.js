@@ -9,6 +9,8 @@ let count = 0;
 let qty = document.querySelector("#numberOfArticle");
 const plus = document.querySelector("#plusBtn");
 const minus = document.querySelector("#minusBtn");
+const darkBackground = document.querySelector("#darkBackground");
+
 
 
 // console.log(items.length);
@@ -76,3 +78,15 @@ function decreaseQty(){
     Number(qty.innerHTML--);
   }
 }
+
+
+openBtn.addEventListener('click', darkBackground);
+closeBtn.addEventListener('click', lightBackground);
+
+// function darkBackground(darkBackground){
+//   darkBackground.style.backgroundColor = 'hsla(0, 0%, 0%, 0.75)';
+// }
+
+// function lightBackground(darkBackground){
+//   darkBackground.style.backgroundColor = 'initial';
+// }

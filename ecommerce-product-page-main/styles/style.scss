@@ -16,7 +16,8 @@ body{
 @media screen and (max-width: 480px){
     
     #darkBackground{
-        
+        position: absolute;
+        background-color: hsla(0, 0%, 0%, 0.7);
     }
 
     #myHeader{

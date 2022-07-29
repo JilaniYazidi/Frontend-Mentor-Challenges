@@ -11,6 +11,9 @@ body {
   background-color: #f7f8fd; }
 
 @media screen and (max-width: 480px) {
+  #darkBackground {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7); }
   #myHeader {
     display: flex;
     justify-content: space-between;
