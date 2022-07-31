@@ -7,9 +7,11 @@ const leftBtn = document.querySelector("#leftBtn");
 const rightBtn = document.querySelector("#rightBtn");
 let count = 0;
 let qty = document.querySelector("#numberOfArticle");
+let push = document.querySelector("#push");
 const plus = document.querySelector("#plusBtn");
 const minus = document.querySelector("#minusBtn");
 const darkBackground = document.querySelector("#darkBackground");
+const cta = document.querySelector("#callToAction");
 
 
 
@@ -70,12 +72,12 @@ plusBtn.addEventListener('click', increaseQty);
 minusBtn.addEventListener('click', decreaseQty);
 
 function increaseQty(){
-  Number(qty.innerHTML++);
+  qty.innerHTML++;
 }
 
 function decreaseQty(){
   if(qty.innerHTML > 0){
-    Number(qty.innerHTML--);
+    qty.innerHTML--;
   }
 }
 
@@ -89,4 +91,18 @@ function darkerBackground(darkBackground){
 
 function lightBackground(darkBackground){
   darkBackground.style.visibility = "hidden";
+}
+
+
+
+cta.addEventListener('click', () => addItemsToCart(qty, push));
+
+function addItemsToCart(qty, push){
+  if(qty == 0){
+    return
+  }
+  else{
+    push.innerHTML = `${qty.innerHTML}`;
+    push.style.visibility = 'visible';
+  }
 }

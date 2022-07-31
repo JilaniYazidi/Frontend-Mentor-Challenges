@@ -1,21 +1,24 @@
-*, *::before, *::after{
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body{
+html,
+body {
     font-family: 'Kumbh Sans', sans-serif;
     font-size: 16px;
 }
 
-body{
+body {
     background-color: hsl(223, 64%, 98%);
 }
 
-@media screen and (max-width: 480px){
-    
-    #darkBackground{
+@media screen and (max-width: 480px) {
+
+    #darkBackground {
         position: absolute;
         z-index: 2000;
         height: 100%;
@@ -24,14 +27,22 @@ body{
         visibility: hidden;
     }
 
-    #myHeader{
+    #myHeader {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 1em 2em;
     }
 
-    .sideNav{
+    #myHeader__left {
+        display: flex;
+    }
+
+    #myHeader__right {
+        display: flex;
+    }
+
+    .sideNav {
         height: 100%;
         width: 250px;
         position: fixed;
@@ -41,7 +52,7 @@ body{
         background-color: hsl(223, 64%, 98%);
         transition: left 0.5s ease;
 
-        a{
+        a {
             padding: 20px 8px 8px 32px;
             text-decoration: none;
             font-size: 20px;
@@ -49,23 +60,24 @@ body{
             font-weight: 700;
             display: block;
             transition: 0.3s;
-              
+
         }
 
-        ul{
+        ul {
             list-style-type: none;
             padding-top: 40px;
             margin: 0;
 
-            li{
+            li {
                 padding-top: 0.25rem;
             }
         }
-        &.active{
+
+        &.active {
             left: 0;
         }
 
-        &.close{
+        &.close {
             position: absolute;
             top: 0;
             right: 25px;
@@ -73,24 +85,36 @@ body{
         }
     }
 
-    .burger-icon span{
+    .burger-icon span {
         display: block;
         width: 17px;
         height: 2px;
-        background-color: black;
-        margin: 6px 0;
+        background-color: hsl(219, 9%, 45%);
+        margin: 4px 15px 0px 0px;
+
     }
 
-    #carrousel{
+    #carrousel {
         width: 100%;
         position: relative;
     }
 
-    #carrouselContainer{
+    // #cartContainer{
+    //     position: absolute;
+    //     height: 50%;
+    //     width: 80%;
+    //     display: flex;
+    //     // justify-content: center;
+    //     // align-items: center;
+    //     border: 3px solid green
+    // }
+
+    #carrouselContainer {
         width: 100%;
     }
 
-    #leftBtn, #rightBtn{
+    #leftBtn,
+    #rightBtn {
         background-color: white;
         padding: 10px 12px;
         border-radius: 20px;
@@ -98,85 +122,108 @@ body{
         top: 230px;
     }
 
-    #leftBtn{
+    #leftBtn {
         left: 20px;
-        &:active{
+
+        &:active {
             transform: scale(1.1);
             transition: all 0.3s ease;
         }
     }
 
-    #rightBtn{
-        right:20px;
-        &:active{
+    #rightBtn {
+        right: 20px;
+
+        &:active {
             transform: scale(1.1);
             transition: all 0.3s ease;
         }
     }
 
-    .carrouselContainer img{
+    .carrouselContainer img {
         width: 100%;
         height: 400px;
         display: none;
-        &.active{
+
+        &.active {
             display: block;
             animation: fade 0.8s;
         }
     }
 
+    #cart {
+        margin-right: 20px;
+        height: fit-content;
+        align-self: center;
+    }
 
+    #push {
+        position: absolute;
+        visibility: hidden;
+        margin-left: 15px;
+        width: 17px;
+        height: 13px;
+        border-radius: 43%;
+        font-size: 10px;
+        text-align: center;
+        background-color: hsl(26, 100%, 55%);
+        color: hsl(25, 100%, 94%);
+    }
 
-    #userPicture{
+    #userPicture {
         width: 2em;
     }
 
-    .rightPart{
+    .rightPart {
         margin: 7%;
         font-size: 1rem;
     }
 
-    h1, #currentPrice{
+    h1,
+    #currentPrice {
         font-size: 2em;
         font-weight: 700;
         margin-top: 0.5em;
         margin-bottom: 0.5em;
     }
 
-    .greyFont{
+    .greyFont {
         font-size: 1em;
         color: hsl(219, 9%, 45%);
         line-height: 1.5em;
     }
 
-    #oldPrice{
+    #oldPrice {
         color: hsl(220, 14%, 75%);
         text-decoration: line-through;
         align-self: center;
     }
 
-    h3{
+    h3 {
         text-transform: uppercase;
-        color:hsl(26, 100%, 55%);
+        color: hsl(26, 100%, 55%);
         display: inline-block;
         font-size: 1em;
         letter-spacing: 0.1rem;
         background-color: hsl(25, 100%, 94%);
     }
 
-    #currentPrice, #oldPrice, #discount{
+    #currentPrice,
+    #oldPrice,
+    #discount {
         display: inline-block;
     }
 
-    #discount{
+    #discount {
         color: hsl(26, 100%, 55%);
         background-color: hsl(25, 100%, 94%);
         padding: 0.25em 0.5em;
         border-radius: 20%;
         margin-left: 1em;
-        
+
     }
 
-    .aboutPrice{
+    .aboutPrice {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
@@ -184,12 +231,15 @@ body{
         margin-bottom: 1em;
     }
 
-    #discount, #numberOfArticle, #callToAction, #oldPrice{
+    #discount,
+    #numberOfArticle,
+    #callToAction,
+    #oldPrice {
         font-size: 1.2em;
         font-weight: 700;
     }
 
-    .quantity{
+    .quantity {
         background-color: #EFEFEF;
         border-radius: 0.7rem;
         margin-top: 1rem;
@@ -199,24 +249,29 @@ body{
         display: flex;
         justify-content: space-between;
         height: 4rem;
-        #minusBtn{
+
+        #minusBtn {
             border-radius: 0.7rem 0 0 0.7rem;
         }
-        #plusBtn{
+
+        #plusBtn {
             border-radius: 0 0.7rem 0.7rem 0;
         }
-        #minusBtn, #plusBtn{
+
+        #minusBtn,
+        #plusBtn {
             border: none;
         }
-        #numberOfArticle{
+
+        #numberOfArticle {
             align-self: center;
         }
     }
 
-    #callToAction{
+    #callToAction {
         display: flex;
         justify-content: center;
-        align-items:center;
+        align-items: center;
         height: 4rem;
         width: 100%;
         border-radius: 0.7rem;
@@ -224,20 +279,22 @@ body{
         background-color: hsl(26, 100%, 55%);
         box-shadow: 0px 20px 20px hsl(25, 100%, 94%);
         color: hsl(25, 100%, 94%);
-            p{
-                display: inline-block;
-                padding-left: 1em;
-            }
+
+        p {
+            display: inline-block;
+            padding-left: 1em;
+        }
     }
 
-    @keyframes fade{
-        from{
+    @keyframes fade {
+        from {
             opacity: 0;
         }
-        to{
+
+        to {
             opacity: 1;
         }
     }
- 
+
 
 }

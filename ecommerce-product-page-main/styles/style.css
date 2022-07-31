@@ -1,9 +1,12 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
-html, body {
+html,
+body {
   font-family: 'Kumbh Sans', sans-serif;
   font-size: 16px; }
 
@@ -23,6 +26,10 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1em 2em; }
+  #myHeader__left {
+    display: flex; }
+  #myHeader__right {
+    display: flex; }
   .sideNav {
     height: 100%;
     width: 250px;
@@ -57,14 +64,15 @@ body {
     display: block;
     width: 17px;
     height: 2px;
-    background-color: black;
-    margin: 6px 0; }
+    background-color: #68707d;
+    margin: 4px 15px 0px 0px; }
   #carrousel {
     width: 100%;
     position: relative; }
   #carrouselContainer {
     width: 100%; }
-  #leftBtn, #rightBtn {
+  #leftBtn,
+  #rightBtn {
     background-color: white;
     padding: 10px 12px;
     border-radius: 20px;
@@ -87,12 +95,28 @@ body {
   .carrouselContainer img.active {
     display: block;
     animation: fade 0.8s; }
+  #cart {
+    margin-right: 20px;
+    height: fit-content;
+    align-self: center; }
+  #push {
+    position: absolute;
+    visibility: hidden;
+    margin-left: 15px;
+    width: 17px;
+    height: 13px;
+    border-radius: 43%;
+    font-size: 10px;
+    text-align: center;
+    background-color: #ff7d1a;
+    color: #ffede0; }
   #userPicture {
     width: 2em; }
   .rightPart {
     margin: 7%;
     font-size: 1rem; }
-  h1, #currentPrice {
+  h1,
+  #currentPrice {
     font-size: 2em;
     font-weight: 700;
     margin-top: 0.5em;
@@ -112,7 +136,9 @@ body {
     font-size: 1em;
     letter-spacing: 0.1rem;
     background-color: #ffede0; }
-  #currentPrice, #oldPrice, #discount {
+  #currentPrice,
+  #oldPrice,
+  #discount {
     display: inline-block; }
   #discount {
     color: #ff7d1a;
@@ -126,7 +152,10 @@ body {
     align-items: flex-end;
     margin-top: 1em;
     margin-bottom: 1em; }
-  #discount, #numberOfArticle, #callToAction, #oldPrice {
+  #discount,
+  #numberOfArticle,
+  #callToAction,
+  #oldPrice {
     font-size: 1.2em;
     font-weight: 700; }
   .quantity {
@@ -143,7 +172,8 @@ body {
     border-radius: 0.7rem 0 0 0.7rem; }
   .quantity #plusBtn {
     border-radius: 0 0.7rem 0.7rem 0; }
-  .quantity #minusBtn, .quantity #plusBtn {
+  .quantity #minusBtn,
+  .quantity #plusBtn {
     border: none; }
   .quantity #numberOfArticle {
     align-self: center; }
