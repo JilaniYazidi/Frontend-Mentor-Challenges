@@ -95,9 +95,9 @@ function lightBackground(darkBackground){
 
 
 
-cta.addEventListener('click', () => addItemsToCart(qty, push));
+cta.addEventListener('click', () => addItemsToCart(qty));
 
-function addItemsToCart(qty, push){
+function addItemsToCart(qty){
   if(qty == 0){
     return
   }
