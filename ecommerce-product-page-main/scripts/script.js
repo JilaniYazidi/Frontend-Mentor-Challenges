@@ -14,10 +14,11 @@ const darkBackground = document.querySelector("#darkBackground");
 const cta = document.querySelector("#callToAction");
 const cart = document.querySelector("#cart");
 let shoppingCartDisplay = false;
+let userBasket = [];
 
 
 
-// console.log(items.length);
+
 
 openBtn.onclick = openNav;
 closeBtn.onclick = closeNav;
@@ -84,6 +85,14 @@ function decreaseQty(){
 }
 
 
+
+
+
+
+
+
+
+
 openBtn.addEventListener('click', () => darkerBackground(darkBackground));
 closeBtn.addEventListener('click', () => lightBackground(darkBackground));
 
@@ -105,19 +114,6 @@ function addItemsToCart(qty){
     push.style.visibility = 'visible';
   }
 }
-
-// cart.addEventListener('click', () => openShoppingCart());
-
-// function checkingCart(qty){
-//   // penser à fermer le cartContainer si 2ème click sur cart (utiliser booleans?)
-//   if(qty.innerHTML == 0){
-//     document.querySelector(".cartContainer").style.visibility = "visible";
-//     let cartContainer__items = document.querySelector(".cartContainer__items");
-//     cartContainer__items.innerHTML = "Your cart is empty.";
-//     cartContainer__items.style.color = "hsl(219, 9%, 45%)";
-//     cartContainer__items.style.fontWeight = "700";
-//   }
-// }
 
 cart.addEventListener('click', () => toggleShoppingCart());
 

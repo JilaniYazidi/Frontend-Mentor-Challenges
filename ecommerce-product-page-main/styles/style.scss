@@ -125,7 +125,13 @@ body {
     .cartContainer__items{
         display: flex;
         justify-content: center;
+        height: 80%;
         align-items: center;
+        border: 1px solid red;
+        p{
+            color: hsl(219, 9%, 45%);
+            font-weight: 900;
+        }
     }
 
     #leftBtn,
@@ -134,7 +140,7 @@ body {
         padding: 10px 12px;
         border-radius: 20px;
         position: absolute;
-        top: 230px;
+        top: 180px;
     }
 
     #leftBtn {

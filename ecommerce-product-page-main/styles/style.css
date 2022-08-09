@@ -90,14 +90,19 @@ body {
   .cartContainer__items {
     display: flex;
     justify-content: center;
-    align-items: center; }
+    height: 80%;
+    align-items: center;
+    border: 1px solid red; }
+  .cartContainer__items p {
+    color: #68707d;
+    font-weight: 900; }
   #leftBtn,
   #rightBtn {
     background-color: white;
     padding: 10px 12px;
     border-radius: 20px;
     position: absolute;
-    top: 230px; }
+    top: 180px; }
   #leftBtn {
     left: 20px; }
   #rightBtn {
